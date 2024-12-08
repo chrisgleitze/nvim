@@ -2,24 +2,25 @@ return {
   "hrsh7th/nvim-cmp",
   lazy = false,
   dependencies = {
-    {
-      "L3MON4D3/LuaSnip",
-      -- follow latest release.
-      version = "v2.*",
-      -- install jsregexp (optional!).
-      build = "make install_jsregexp",
-    },
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer",
+    { "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp", },
   },
 
   opts = function()
+
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
     local cmp = require("cmp")
     local defaults = require("cmp.config.default")()
     local auto_select = true
+
     return {
+
       window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
+
       },
       auto_brackets = {}, -- configure any filetype to auto add brackets
 
@@ -52,6 +53,7 @@ return {
         { name = "buffer" },
       }),
       formatting = {
+
         format = function(entry, item)
           local icons = LazyVim.config.icons.kinds
           if icons[item.kind] then
@@ -71,13 +73,9 @@ return {
 
           return item
         end,
+
       },
-      experimental = {
-        -- only show ghost text when we show ai completions
-        ghost_text = vim.g.ai_cmp and {
-          hl_group = "CmpGhostText",
-        } or false,
-      },
+
       sorting = defaults.sorting,
     }
   end,
