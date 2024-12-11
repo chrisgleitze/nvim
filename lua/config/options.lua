@@ -19,7 +19,7 @@ vim.opt.signcolumn = "yes"
 -- highlight search, incremental search
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.scrolloff = 14
+vim.opt.scrolloff = 10
 
 vim.opt.guicursor = { "n-v-ve-o-r-c-cr-sm:block-blinkon175", "i-ci:ver25-blinkon175" }
 
