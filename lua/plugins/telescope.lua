@@ -26,6 +26,3 @@ return {
     }
   end,
 }
-
--- ["<a-i>"] = find_files_no_ignore,
--- ["<a-h>"] = find_files_with_hidden,
