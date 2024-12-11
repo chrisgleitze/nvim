@@ -12,6 +12,7 @@ vim.opt.rnu = true
 -- creation of swapfiles and backup files
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.undofile = true
 
 vim.opt.signcolumn = "yes"
 
@@ -23,8 +24,8 @@ vim.opt.scrolloff = 14
 vim.opt.guicursor = { "n-v-ve-o-r-c-cr-sm:block-blinkon175", "i-ci:ver25-blinkon175" }
 
 -- cursorline not highlighted
-vim.api.nvim_create_autocmd('ColorScheme', {
-  command = [[highlight CursorLine guibg=NONE cterm=underline]]
+vim.api.nvim_create_autocmd("ColorScheme", {
+  command = [[highlight CursorLine guibg=NONE cterm=underline]],
 })
 
 vim.diagnostic.disable()
