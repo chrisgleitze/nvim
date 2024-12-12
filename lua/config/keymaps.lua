@@ -27,3 +27,6 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
 -- helps you change all occurrences of the word the cursor is on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- make Y behave like C and D - copy text until end of line
+vim.keymap.set("n", "Y", "y$")
