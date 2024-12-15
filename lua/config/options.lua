@@ -29,3 +29,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.diagnostic.disable()
+
+-- disable animations of snacks.nvim
+vim.g.snacks_animate = false
