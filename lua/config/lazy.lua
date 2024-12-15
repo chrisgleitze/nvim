@@ -20,6 +20,8 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
+    -- since LazyVim 14.0 Telescope is a LazyVim Extra, enabled here:
+    { import = "lazyvim.plugins.extras.editor.telescope" },
 
     -- import/override with your plugins
     { import = "plugins" },
