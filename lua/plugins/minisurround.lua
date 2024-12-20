@@ -20,14 +20,21 @@ return {
     return vim.list_extend(mappings, keys)
   end,
   opts = {
-    mappings = {
-      add = "gsa", -- Add surrounding in Normal and Visual modes
-      delete = "gsd", -- Delete surrounding
-      find = "gsf", -- Find surrounding (to the right)
-      find_left = "gsF", -- Find surrounding (to the left)
-      highlight = "gsh", -- Highlight surrounding
-      replace = "gsr", -- Replace surrounding
-      update_n_lines = "gsn", -- Update `n_lines`
+    custom_surroundings = {
+      ["("] = { output = { left = "( ", right = " )" } },
+      ["["] = { output = { left = "[ ", right = " ]" } },
+      ["{"] = { output = { left = "{ ", right = " }" } },
+      ["<"] = { output = { left = "< ", right = " >" } },
     },
+    mappings = {
+      add = "ys",
+      delete = "ds",
+      find = "",
+      find_left = "",
+      highlight = "",
+      replace = "cs",
+      update_n_lines = "",
+    },
+    search_method = "cover_or_next",
   },
 }
