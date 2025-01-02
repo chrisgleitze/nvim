@@ -18,7 +18,7 @@ return {
         ["--highlight-line"] = true,
       },
       defaults = {
-        formatter = "path.dirname_first", -- show directory before file name but grey it out
+        formatter = "path.dirname_first", -- show greyed-out directory before filename
         no_header = true,
       },
     }
