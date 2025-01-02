@@ -7,29 +7,22 @@ return {
 
     return {
       "default-title",
-      -- fzf_colors = false,
-      -- fzf_opts = {
-      --   ["--no-scrollbar"] = true,
-      --   ["--header"] = " ",
-      -- },
       defaults = {
-        -- formatter = "path.filename_first",
-        -- show file directory but grey it out:
-        formatter = "path.dirname_first",
+        formatter = "path.dirname_first", -- show directory before file name but grey it out
         no_header = true,
       },
-      -- previewers = {
-      --   builtin = {
-      --     extensions = {
-      --       ["png"] = img_previewer,
-      --       ["jpg"] = img_previewer,
-      --       ["jpeg"] = img_previewer,
-      --       ["gif"] = img_previewer,
-      --       ["webp"] = img_previewer,
-      --     },
-      --     ueberzug_scaler = "fit_contain",
-      --   },
-      -- },
+      previewers = {
+        builtin = {
+          extensions = {
+            ["png"] = img_previewer,
+            ["jpg"] = img_previewer,
+            ["jpeg"] = img_previewer,
+            ["gif"] = img_previewer,
+            ["webp"] = img_previewer,
+          },
+          ueberzug_scaler = "fit_contain",
+        },
+      },
     }
   end,
 }
