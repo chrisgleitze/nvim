@@ -9,6 +9,14 @@ return {
 
     return {
       "default-title",
+      fzf_colors = true,
+      fzf_opts = {
+        ["--no-scrollbar"] = true,
+        ["--cycle"] = true,
+        ["--ansi"] = true,
+        ["--height"] = "100%",
+        ["--highlight-line"] = true,
+      },
       defaults = {
         formatter = "path.dirname_first", -- show directory before file name but grey it out
         no_header = true,
