@@ -22,7 +22,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     -- enabled plugins that are "Extras" since LazyVim 14.0:
     -- { import = "lazyvim.plugins.extras.editor.telescope" },
-    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
+    -- { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
 
     -- import/override with your plugins
     { import = "plugins" },
