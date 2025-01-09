@@ -23,6 +23,21 @@ return {
       },
     },
     opts = {
+      completion = {
+        menu = {
+          draw = {
+            treesitter = { "lsp" },
+          },
+          border = "rounded",
+        },
+        documentation = {
+          auto_show = true,
+          auto_show_delay_ms = 200,
+          window = {
+            border = "rounded",
+          },
+        },
+      },
       sources = {
         -- adding any nvim-cmp sources here will enable them
         -- with blink.compat
