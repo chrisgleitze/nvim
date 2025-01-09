@@ -12,8 +12,25 @@ return {
     "saghen/blink.cmp",
     lazy = false,
     enabled = true,
-    opts = function(_, opts)
-      opts.keymap = {
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+      -- add blink.compat to dependencies
+      {
+        "saghen/blink.compat",
+        optional = true, -- make optional so it's only enabled if any extras need it
+        opts = {},
+        version = not vim.g.lazyvim_blink_main and "*",
+      },
+    },
+    opts = {
+      sources = {
+        -- adding any nvim-cmp sources here will enable them
+        -- with blink.compat
+        compat = {},
+        default = { "lsp", "path", "snippets", "buffer" },
+        cmdline = {},
+      },
+      keymap = {
         preset = "default",
         ["<Up>"] = { "select_prev", "fallback" },
         ["<Down>"] = { "select_next", "fallback" },
@@ -23,9 +40,7 @@ return {
         ["<CR>"] = { "accept", "fallback" },
 
         ["<C-e>"] = { "hide", "fallback" },
-      }
-
-      return opts
-    end,
+      },
+    },
   },
 }
