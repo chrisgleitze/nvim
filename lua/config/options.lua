@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   command = [[highlight CursorLine guibg=NONE cterm=underline]],
 })
 
-vim.diagnostic.disable()
+vim.diagnostic.enable(false)
 
 -- disable animations of snacks.nvim
 vim.g.snacks_animate = false
