@@ -37,6 +37,24 @@ return {
       lspconfig.lua_ls.setup({})
       lspconfig.ts_ls.setup({})
       lspconfig.vtsls.setup({})
+
+      lspconfig.emmet_ls.setup({
+        -- on_attach = on_attach,
+        filetypes = {
+          "css",
+          "eruby",
+          "html",
+          "javascript",
+          "javascriptreact",
+          "less",
+          "sass",
+          "scss",
+          "svelte",
+          "pug",
+          "typescriptreact",
+          "vue",
+        },
+      })
     end,
   },
   {
