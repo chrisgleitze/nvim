@@ -5,6 +5,7 @@ return {
       require("mason").setup()
     end,
   },
+
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
@@ -23,6 +24,7 @@ return {
       })
     end,
   },
+
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -56,7 +58,9 @@ return {
       })
     end,
   },
+
   {
+    -- formatter
     "stevearc/conform.nvim",
     dependencies = { "mason.nvim" },
     event = { "BufReadPre", "BufNewFile" },
