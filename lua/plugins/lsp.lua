@@ -39,7 +39,6 @@ return {
       lspconfig.vtsls.setup({})
 
       lspconfig.emmet_ls.setup({
-        -- on_attach = on_attach,
         filetypes = {
           "css",
           "eruby",
