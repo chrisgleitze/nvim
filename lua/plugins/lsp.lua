@@ -35,11 +35,34 @@ return {
     },
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.html.setup({})
-      lspconfig.lua_ls.setup({})
-      lspconfig.ts_ls.setup({})
-      lspconfig.vtsls.setup({})
-
+      lspconfig.html.setup({
+        filetypes = { "html" },
+      })
+      lspconfig.lua_ls.setup({
+        filetypes = { "lua" },
+      })
+      lspconfig.ts_ls.setup({
+        filetypes = {
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "javascript.jsx",
+          "typescriptreact",
+          "typescript.tsx",
+          "vue",
+        },
+      })
+      lspconfig.vtsls.setup({
+        filetypes = {
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "javascript.jsx",
+          "typescriptreact",
+          "typescript.tsx",
+          "vue",
+        },
+      })
       lspconfig.emmet_ls.setup({
         filetypes = {
           "css",
