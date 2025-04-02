@@ -44,12 +44,17 @@ return {
       },
       keymap = {
         preset = "default",
+        ["<C-y>"] = { "select_and_accept" },
+
         ["<Up>"] = { "select_prev", "fallback" },
         ["<Down>"] = { "select_next", "fallback" },
 
         ["<C-k>"] = { "select_prev", "fallback" },
         ["<C-j>"] = { "select_next", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
+
+        ["<C-b>"] = { "scroll_documentation_up", "fallback" },
+        ["<C-f>"] = { "scroll_documentation_down", "fallback" },
 
         ["<C-e>"] = { "hide", "fallback" },
       },
