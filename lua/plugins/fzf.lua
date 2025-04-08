@@ -21,6 +21,17 @@ return {
         formatter = "path.dirname_first", -- show greyed-out directory before filename
         no_header = true,
       },
+      keymap = {
+        fzf = {
+          ["ctrl-k"] = "up",
+          ["ctrl-j"] = "down",
+          ["ctrl-f"] = "preview-page-up",
+          ["ctrl-b"] = "preview-page-down",
+          ["ctrl-u"] = "half-page-up", -- in list of search results
+          ["ctrl-d"] = "half-page-down", -- in list of search results
+          ["ctrl-q"] = "abort",
+        },
+      },
     }
   end,
 }
