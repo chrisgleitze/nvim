@@ -43,7 +43,7 @@ return {
       })
       lspconfig.ts_ls.setup({
         filetypes = {
-          "javascript",
+          -- "javascript",
           "typescript",
           "javascriptreact",
           "javascript.jsx",
