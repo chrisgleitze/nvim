@@ -1,7 +1,11 @@
 return {
   {
     "williamboman/mason.nvim",
-    opts = { ensure_installed = { "prettier" } },
+    opts = {
+      ensure_installed = {
+        "prettier",
+      },
+    },
   },
 
   {
