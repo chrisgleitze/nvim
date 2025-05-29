@@ -18,7 +18,7 @@ return {
           "cssls",
           "tailwindcss",
           "lua_ls",
-          "emmet_ls",
+          "emmet_language_server",
           "rust_analyzer",
           "ts_ls",
           "vtsls",
@@ -54,18 +54,18 @@ return {
           "vue",
         },
       })
-      lspconfig.vtsls.setup({
-        filetypes = {
-          "javascript",
-          "typescript",
-          "javascriptreact",
-          "javascript.jsx",
-          "typescriptreact",
-          "typescript.tsx",
-          "vue",
-        },
-      })
-      lspconfig.emmet_ls.setup({
+      -- lspconfig.vtsls.setup({
+      --   filetypes = {
+      --     "javascript",
+      --     "typescript",
+      --     "javascriptreact",
+      --     "javascript.jsx",
+      --     "typescriptreact",
+      --     "typescript.tsx",
+      --     "vue",
+      --   },
+      -- })
+      lspconfig.emmet_language_server.setup({
         filetypes = {
           "css",
           "eruby",
